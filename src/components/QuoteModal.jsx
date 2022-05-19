@@ -20,11 +20,9 @@ export const QuoteModal = () => {
           setQuotes(datavalue);
           setCurrentQuote(datavalue[0]);
           setIsLoading(false);
-          console.log('LOADING');
         })
         .catch((error) => alert(error));
     })();
-    console.log('EFFECT')
   }, []);
 
   const getQuoteHandler = () => setCurrentQuote(getQoute(quotes));
@@ -32,7 +30,6 @@ export const QuoteModal = () => {
 
   return (
     <div className="quote-container" id="quote-container">
-      {console.log('RENDER')}
       <div className="quote-text">
         <i className="fas fa-quote-left"></i>
         <span id="quote-container">{currentQuote.text}</span>
